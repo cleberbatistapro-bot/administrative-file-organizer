@@ -1,6 +1,7 @@
 from src.organizer.paths import ensure_directories_exist
 from src.organizer.scanner import list_files
 from src.organizer.mover import move_file
+from src.organizer.reporter import generate_report
 
 def main():
     print("=== Organizador de Arquivos ===")
@@ -17,12 +18,13 @@ def main():
     
     print(f"Arquivos encontrados: {total}")
     print()
-
+    results =[]
     for file in files:
-        move_file(file)
+        result = move_file(file)
+        results.append(result)
         print(f" Movido: {file.name}")
 
-    print()
+    generate_report(results, total)
     print(f"Concluído! {total} arquivo(s) organizado(s).")
 
 

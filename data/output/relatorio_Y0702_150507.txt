@@ -1,0 +1,6 @@
+Relatório de Execução
+Data: 02072026 15:05:07
+Total de arquivos processados: 1
+
+Arquivos movidos:
+ guia estudo hubspot.pdf -> Documentos
