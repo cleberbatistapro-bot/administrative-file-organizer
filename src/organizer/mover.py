@@ -1,4 +1,6 @@
 import shutil
+from datetime import datetime
+
 
 from src.organizer.paths import OUTPUT_DIR
 from src.organizer.classifier import classify_file 
@@ -8,7 +10,13 @@ def move_file(file_path):
     category = classify_file(file_path)
     category_dir = OUTPUT_DIR / category
     category_dir.mkdir(parents=True, exist_ok=True)
-
     destination = category_dir / file_path.name
+
+    if destination.exists():
+        timestamp = datetime.now().strftime("%Y%m%d_%H%m%S")
+        new_name = file_path.stem + "_" + timestamp + file_path.suffix
+        destination = category_dir / new_name
+
+   
     shutil.move(file_path, destination)
     
