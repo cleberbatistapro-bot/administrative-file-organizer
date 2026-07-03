@@ -1,12 +1,12 @@
 from datetime import datetime
-from src.organizer.paths import OUTPUT_DIR
 
 
-def generate_report(results, total):
+
+def generate_report(results, total, output_dir):
     """Gera um arquivo .txt com o relatório de execução."""
     timestamp = datetime.now().strftime("Y%m%d_%H%M%S")
     report_name = f"relatorio_{timestamp}.txt"
-    report_path = OUTPUT_DIR / report_name
+    report_path = output_dir / report_name
     with open(report_path, "w", encoding="utf-8") as f:
         f.write("Relatório de Execução\n")
         f.write(f"Data: {datetime.now().strftime('%d%m%Y %H:%M:%S')}\n")
