@@ -8,6 +8,7 @@
 AppName=Organizador de Arquivos
 AppVersion=1.0.0
 AppPublisher=OonaTech
+SetupIconFile=interface\static\organizador.ico
 DefaultDirName={autopf}\OonaTech\OrganizadorArquivos
 DefaultGroupName=OonaTech\Organizador de Arquivos
 OutputDir=dist\instalador

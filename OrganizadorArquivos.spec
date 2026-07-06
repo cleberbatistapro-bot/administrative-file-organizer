@@ -23,6 +23,7 @@ exe = EXE(
     a.datas,
     [],
     name='OrganizadorArquivos',
+    icon='interface/static/organizador.ico',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
