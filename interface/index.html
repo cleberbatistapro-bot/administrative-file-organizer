@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organizador de Arquivos Administrativos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="dark">
+
+  <div class="app">
+
+    <div class="topbar">
+      <div class="logo">
+        <div class="logo-icon">
+          <i class="ti ti-folders"></i>
+        </div>
+        <div>
+          <div class="logo-name">Organizador de Arquivos</div>
+          <div class="logo-sub">Administrativos</div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <span class="status-badge" id="statusBadge">● Pronto para usar</span>
+        <button class="theme-btn" id="themeBtn" aria-label="Alternar tema">
+          <i class="ti ti-sun" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="main">
+
+      <div class="section">
+        <div class="section-label">Passo 1 — Escolha o modo de organização</div>
+        <div class="mode-row">
+          <div class="mode-card active" id="modo1" data-modo="1">
+            <div class="mode-icon"><i class="ti ti-folder"></i></div>
+            <div class="mode-title">Pasta específica</div>
+            <div class="mode-desc">Organiza dentro da própria pasta selecionada</div>
+          </div>
+          <div class="mode-card" id="modo2" data-modo="2">
+            <div class="mode-icon"><i class="ti ti-folders"></i></div>
+            <div class="mode-title">Destino fixo</div>
+            <div class="mode-desc">Arquivos vão para "Organizado" na Área de Trabalho</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Passo 2 — Escolha a pasta a organizar</div>
+        <div class="folder-box">
+          <i class="ti ti-folder-open folder-icon"></i>
+          <span class="folder-path" id="folderPath">Nenhuma pasta selecionada</span>
+          <button class="btn-sel" id="btnSelecionar">
+            <i class="ti ti-folder-search"></i>
+            Selecionar pasta
+          </button>
+        </div>
+        <input type="text" class="folder-input" id="folderInput" placeholder="Ou digite o caminho da pasta aqui..." />
+        <div class="destino-fixo" id="destinoFixoInfo" style="display:none;">
+          <i class="ti ti-pin destino-icon"></i>
+          <div>
+            <div class="destino-texto">Os arquivos serão organizados em:</div>
+            <div class="destino-path">Área de Trabalho\Organizado\</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Passo 3 — Opções</div>
+        <div class="options-row">
+          <div class="opt-card">
+            <div class="toggle on" id="toggleBackup" data-state="on">
+              <div class="toggle-dot"></div>
+            </div>
+            <div>
+              <div class="opt-label">Criar backup</div>
+              <div class="opt-sub">Salva cópia antes de mover</div>
+            </div>
+          </div>
+          <div class="opt-card">
+            <div class="toggle off" id="toggleSimulacao" data-state="off">
+              <div class="toggle-dot"></div>
+            </div>
+            <div>
+              <div class="opt-label">Modo simulação</div>
+              <div class="opt-sub">Apenas visualiza, não move</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Passo 4 — Executar</div>
+        <button class="btn-run" id="btnOrganizar">
+          <i class="ti ti-player-play"></i>
+          Organizar arquivos agora
+        </button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section" id="secaoResultados" style="display:none;">
+
+        <div class="section-label">Resumo da organização</div>
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-num" id="statTotal">0</div>
+            <div class="stat-label">Arquivos encontrados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num green" id="statMovidos">0</div>
+            <div class="stat-label">Movidos com sucesso</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num red" id="statErros">0</div>
+            <div class="stat-label">Não reconhecidos</div>
+          </div>
+        </div>
+
+        <div class="section-label" style="margin-top:18px;">Arquivos por tipo</div>
+        <div class="ext-card" id="extCard"></div>
+
+        <div class="section-label" style="margin-top:18px;">Arquivos movidos</div>
+        <div class="results-area" id="listaResultados"></div>
+
+      </div>
+
+      <div class="section erro-box" id="erroBox" style="display:none;">
+        <i class="ti ti-alert-circle"></i>
+        <span id="erroMensagem"></span>
+      </div>
+
+    </div>
+
+    <div class="bottombar">
+      <span class="versao">v1.0.0 — Organizador de Arquivos Administrativos</span>
+      <span class="log-link" id="btnLog">
+        <i class="ti ti-file-text"></i>
+        Ver log completo
+      </span>
+    </div>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+Relatório de Execução
+Data: 06072026 09:21:44
+Total de arquivos processados: 24
+
+Arquivos movidos:
+ Asimov Academy.lnk -> Outros
+ Botão Inteligente.docx -> Documentos
+ Currículo Cleber Batista.pdf -> Documentos
+ Curso de Inglês Teacher Murilo.lnk -> Outros
+ Cursos Gratuitos (cleber).lnk -> Outros
+ Cursos Online de Front End e UX UI Design - Origamid (cleber).lnk -> Outros
+ Dashboard   Pepper.lnk -> Outros
+ Dicção sem Travas.lnk -> Outros
+ FaceFit (Cleber).lnk -> Outros
+ funções excel.docx -> Documentos
+ funções mais usada no excel.docx -> Documentos
+ Home - devaprender.lnk -> Outros
+ LICENCIAMENTO 2025.pdf -> Documentos
+ Meus Cursos – Guia do Excel.lnk -> Outros
+ MT.lnk -> Outros
+ Mundo Power.lnk -> Outros
+ Nerd dos Dados.lnk -> Outros
+ Portal   Hashtag Treinamentos.lnk -> Outros
+ Ressonância Harmônica   Professor Hélio Couto.lnk -> Outros
+ SEMINARIOS.lnk -> Outros
+ teorico.pdf -> Documentos
+ Trade Spark.lnk -> Outros
+ Treinamentos NucleoExpert.lnk -> Outros
+ Validation de mesa.xlsx -> Planilhas

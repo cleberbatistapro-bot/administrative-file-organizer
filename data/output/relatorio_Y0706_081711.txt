@@ -1,0 +1,11 @@
+Relatório de Execução
+Data: 06072026 08:17:11
+Total de arquivos processados: 4
+
+Arquivos movidos:
+ documentacao.md -> Outros
+ documentacao.pdf -> Documentos
+ foto.png -> Imagens
+  (Renomeado por duplicata)
+ foto2.jpg -> Imagens
+  (Renomeado por duplicata)
